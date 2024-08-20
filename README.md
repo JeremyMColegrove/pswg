@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/JeremyMColegrove/pswg/badge.svg?branch=master)](https://coveralls.io/github/JeremyMColegrove/pswg?branch=master)
 # 🌟 pswg: Password Security with Grace
 
 **PSWG** is a versatile and secure password generator designed for command-line use and integration into your Node.js projects using the crypto module. With PSWG, you can generate secure passwords with customizable options, including password length, character set control, and more from the command line or in your code.
