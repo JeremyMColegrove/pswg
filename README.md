@@ -1,30 +1,124 @@
-# Getting Started with Your Node TypeScript NPM Package
+# 🌟 pswg: Password Security with Grace
 
-Follow these steps to customize and set up your package:
+**PSWG** is a versatile and secure password generator designed for command-line use and integration into your Node.js projects using the crypto module. With PSWG, you can generate secure passwords with customizable options, including password length, character set control, and more from the command line or in your code.
 
-1. **Update Package Name**  
-   - Modify _your-package-name_ in _package.json_ and other relevant files to reflect your package's name.
+### Key Features:
 
-2. **Update Command Line Interface (CLI) Command**  
-   - Update the _bin/*_ files to define the CLI command you want to use.
-   - Reflect these changes in the _package.json_ under the _bin_ section.
+- **Secure Password Generation**: Generate passwords using cryptographically secure random values.
+- **Customizable Length**: Specify the exact length of the password.
+- **Character Set Control**: Include or exclude uppercase letters, numbers, and symbols.
+- **Easy to Use**: Simple API for both command-line and programmatic usage.
 
-3. **Setup Git Repository**  
-   - Initialize your Git repository.
-   - Add GitHub Actions as _coverall-github-action-workflow_ (copy and paste is fine, but feel free to modify if needed).
+## 🚀 Installation
 
-4. **Fill in the README**  
-   - Provide detailed information about your package in the README file.
+To use it in the command line, install PSWG globally via npm:
 
-5. **Add Your Code**  
-   - Add your package files to the _src/*_ directory.
+`install -g pswg`
 
-6. **Use .js Extensions**  
-   - Ensure that all imports use _.js_ extensions, since this package outputs both ESM and CJS formats.
+Or add it to your project dependencies:
 
-7. **Modify .gitignore**  
-   - The _.gitignore_ file is already set up, but feel free to add any other files you want to ignore.
+`npm install pswg --save`
 
-8. **Configure TypeScript**  
-   - Modify the TypeScript configuration in _config/*_ to suit your needs.
-   - _esModuleInterop_ is turned off in _tsconfig_ because this is a package. If you turn it on, any other package using this will need to have it enabled too.
+## 🛠 Getting Started
+
+To generate a password, you can use the following simple commands:
+
+### Command Line Usage
+
+generate a secure password with default settings:
+
+```bash
+#generate a password with default settings:
+pswg
+#generate a 16-character password:
+pswg --length 16
+```
+
+### Programmatic Usage
+
+You can also use PSWG within your Node.js projects:
+
+```javascript 
+import pswg from 'pswg'
+const password = pswg({ length: 16, excludeSymbols: true })
+console.log(password)
+```
+
+## 📸 Example
+
+![Example image](image.png)
+
+## 🌟 Why Choose PSWG?
+
+PSWG offers a balance of simplicity and power, making it an ideal tool for developers and users alike who need secure, random passwords with customizable options.
+
+## 🌍 Supported Environments
+
+- **Node.js**: v12 and above
+- **Command Line**: Compatible with all major operating systems
+
+## 🎨 Customization
+
+Customize your password generation with options:
+
+- **Length**: Define the length of your password.
+- **Exclude Symbols**: Option to exclude symbols.
+- **Exclude Uppercase**: Option to exclude uppercase letters.
+- **Exclude Numbers**: Option to exclude numbers.
+
+### Example
+```javascript
+import pswg from 'pswg'
+
+const pw = pswg({
+  length: 16, // the length of the password
+  excludeSymbols: true, // exclude symbols from the password
+  excludeUppercase: false,  // exclude uppercase letters
+  excludeNumbers: false // exclude numbers
+})
+```
+
+## 🔧 Command Line Usage
+
+### Basic Usage
+
+_generate a password with default settings:_
+
+```
+pswg
+```
+
+### Options
+
+- **--length [length]**: Specify the length of the password. Default is 18 characters.
+- **-es, --excludeSymbols**: Exclude symbols from the password.
+- **-eu, --excludeUppercase**: Exclude uppercase letters from the password.
+- **-en, --excludeNumbers**: Exclude numbers from the password.
+
+### Version
+
+_check the version of PSWG you are using:_
+
+```bash
+pswg --version
+```
+
+### Example Commands
+
+_generate a 12-character password with no symbols:_
+
+```bash
+pswg --length 12 --excludeSymbols
+```
+
+### Combining Options
+
+_generate an 8-character password using only lowercase letters and numbers:_
+
+```bash
+pswg --length 8 --excludeUppercase --excludeSymbols
+```
+
+## 🔧 Acknowledgments & Contributions
+
+Contributions are welcome! If you have any suggestions or improvements, please feel free to submit a pull request or open an issue on GitHub.

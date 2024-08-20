@@ -1,2 +1,2 @@
-// import * as something from 'something'
-// export default something
+import pswg from './pswg.js'
+export default pswg

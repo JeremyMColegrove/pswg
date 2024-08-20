@@ -10,7 +10,7 @@
       "types": "./dist/types/index.d.ts"
     }
   },
-  "bin": "./bin/command-line-name.js",
+  "bin": "./bin/pswg.js",
   "scripts": {
     "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types && npm run build:package",
     "build:package": "echo {\\\"type\\\": \\\"commonjs\\\"} > dist/cjs/package.json && echo {\\\"type\\\": \\\"module\\\"} > dist/esm/package.json",
@@ -30,15 +30,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "your-repo-here"
+    "url": "https://github.com/JeremyMColegrove/pswg"
   },
   "license": "MIT",
   "keywords": [],
   "author": "Jeremy Colegrove",
   "bugs": {
-    "url": "https://github.com/JeremyMColegrove/git-name-here/issues"
+    "url": "https://github.com/JeremyMColegrove/pswg/issues"
   },
-  "homepage": "https://github.com/JeremyMColegrove/git-name-here#readme",
+  "homepage": "https://github.com/JeremyMColegrove/pswg#readme",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^22.2.0",
@@ -50,6 +50,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "commander": "^12.1.0"
+    "commander": "^12.1.0",
+    "crypto": "^1.0.1"
   }
 }
