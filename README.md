@@ -14,7 +14,7 @@
 
 To use it in the command line, install PSWG globally via npm:
 
-`install -g pswg`
+`npm install -g pswg`
 
 Or add it to your project dependencies:
 
@@ -42,7 +42,6 @@ You can also use PSWG within your Node.js projects:
 ```javascript 
 import pswg from 'pswg'
 const password = pswg({ length: 16, excludeSymbols: true })
-console.log(password)
 ```
 
 ## 📸 Example
@@ -67,13 +66,13 @@ Customize your password generation with options:
 - **Exclude Uppercase**: Option to exclude uppercase letters.
 - **Exclude Numbers**: Option to exclude numbers.
 
-### Example
+### Example (with default options)
 ```javascript
 import pswg from 'pswg'
 
 const pw = pswg({
-  length: 16, // the length of the password
-  excludeSymbols: true, // exclude symbols from the password
+  length: 18, // the length of the password
+  excludeSymbols: false, // exclude symbols from the password
   excludeUppercase: false,  // exclude uppercase letters
   excludeNumbers: false // exclude numbers
 })
