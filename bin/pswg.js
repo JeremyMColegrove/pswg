@@ -18,7 +18,7 @@ const program = new Command()
 program
     .usage('[options] <file ...>')
     .version(packageJson.version)
-    .option('--length [length]', 'Max length of string to display', parseInt)
+    .option('--length [length]', 'Length of password', parseInt)
     .option('-es, --excludeSymbols', 'Exclude symbols')
     .option('-eu, --excludeUppercase', 'Exclude uppercase letters')
     .option('-en, --excludeNumbers', 'Exclude numbers')

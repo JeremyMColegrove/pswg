@@ -108,7 +108,7 @@ pswg --version
 _generate a 12-character password with no symbols:_
 
 ```bash
-pswg --length 12 --excludeSymbols
+pswg --length 12 --es
 ```
 
 ### Combining Options
@@ -116,7 +116,7 @@ pswg --length 12 --excludeSymbols
 _generate an 8-character password using only lowercase letters and numbers:_
 
 ```bash
-pswg --length 8 --excludeUppercase --excludeSymbols
+pswg --length 8 --eu --es
 ```
 
 ## 🔧 Acknowledgments & Contributions

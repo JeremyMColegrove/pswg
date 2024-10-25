@@ -1,6 +1,6 @@
 {
   "name": "pswg",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Generate passwords and codes through the command line or in code.",
   "type": "module",
   "exports": {
@@ -50,7 +50,6 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "commander": "^12.1.0",
-    "crypto": "^1.0.1"
+    "commander": "^12.1.0"
   }
 }
